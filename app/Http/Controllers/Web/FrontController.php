@@ -22,7 +22,7 @@ class FrontController extends Controller
                 Mail::send('email.contact_admin', ['payload' => $payload], function ($message) use($email_subject) {
                     
                     $message->subject($email_subject);
-                    $message->to(env("MAIL_FROM_ADDRESS"););
+                    $message->to(env("MAIL_FROM_ADDRESS"));
                 });
     			Session::flash('message', 'We have received your message, will contact you soon.'); 
                 Session::flash('alert-class', 'alert-success'); 
