@@ -558,26 +558,26 @@ Home
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-6 col-md-6">
           <div class="info">
-            <div>
+            <div class="form-group">
               <i class="fa fa-map-marker"></i>
               <p> <a href="https://www.google.com/maps/dir//18.4941496,73.8212983/@18.49415,73.821298,16z?hl=en-GB" target="_blank">Snehal Apartments, Sahawas Society, Karve Nagar 411052, <br> Pune, Maharashtra, India</a></p>
             </div>
 
-            <div>
+            <div class="form-group">
               <i class="fa fa-envelope"></i>
               <p><a href="mailto:info@dhcd.in">info@dhcd.in</a></p>
             </div>
 
-            <div>
+            <div class="form-group">
               <i class="fa fa-phone"></i>
               <p><a href="tel:9371923042">9371923042</a></p>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-5 col-md-8">
+        <div class="col-lg-6 col-md-6">
           <div class="form">
             <form action="{{URL::to('/contact')}}" method="post" role="form" class="contactForm" enctype="multipart/form-data">
               @csrf
@@ -588,7 +588,7 @@ Home
                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" maxlength="200" minlength="3" required="required" value="{{ old('email') }}" />
               </div>
               <div class="form-group">
-                <select id="subject" name="subject" class="form-control" required="">
+                <select id="subject" name="subject" class="form-control" required="required">
                   <option value="" disabled="disabled" selected="selected">Select purpose of contact</option>
                   <option value="New Construction">New Construction</option>
                   <option value="Renovation">Renovation</option>
@@ -599,9 +599,6 @@ Home
               </div>
               <div class="form-group">
                 <textarea class="form-control" id="message" name="message" rows="5" required="required" data-msg="Please write something for us" placeholder="Message">{{ old('message')}}</textarea>
-              </div>
-              <div class="form-group">
-                <input type="file" name="attachment" id="attachment" class="form-control" accept=".pdf">
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>

@@ -32,11 +32,11 @@
 <body>
     <div id="app">
 
-        <main class="py-4">
+        
             @includeIf('partial.session')
             @includeIf('partial.validator') 
             @yield('content')
-        </main>
+        
     </div>
 
       <script src="{{URL::to('lib/jquery/jquery.min.js')}}"></script>
